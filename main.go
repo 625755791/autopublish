@@ -10,7 +10,7 @@ func sayhelloName(w http.ResponseWriter, r *http.Request) {
 	var bodt []byte;
 	bodyreader.Read(bodt);
     fmt.Fprintf(w,	string(bodt)); 
-}
+} 
 func main() {
     http.HandleFunc("/", sayhelloName) //设置访问的路由
     err := http.ListenAndServe(":9090", nil) //设置监听的端口
