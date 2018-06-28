@@ -9,7 +9,8 @@ func sayhelloName(w http.ResponseWriter, r *http.Request) {
 	var bodyreader = r.Body;
 	var bodt []byte;
 	bodyreader.Read(bodt);
-    fmt.Fprintf(w,	string(bodt)); 
+	fmt.Fprintf(w,	string(bodt)); 
+	fmt.Printf(	string(bodt))
 } 
 func main() {
     http.HandleFunc("/", sayhelloName) //设置访问的路由
